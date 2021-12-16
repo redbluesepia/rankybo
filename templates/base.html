@@ -15,7 +15,6 @@
     <link rel="stylesheet" type="text/css" href="{% static 'simplemde.min.css' %}">
 
 
-
     <title> Hello, 랭키스탁! </title>
 
 </head>
@@ -40,10 +39,12 @@
 <script src="{% static 'bootstrap.min.js' %}"></script>
 
 
-
 {#자바스크립트 시작#}
 {% block script %}
-
+    <script src="{% static 'simplemde.min.js' %}"></script>
+    <script>
+        var simplemde = new SimpleMDE({element: document.getElementById("content")});
+    </script>
 {% endblock %}
 {#자바스크립트 끝#}
 
