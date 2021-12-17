@@ -6,6 +6,7 @@ from django.db.models import Q, Count
 
 
 def index(request):
+    3/0 # 강제로 오류 발생
     """
     rankybo 목록 출력
     """
