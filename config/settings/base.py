@@ -181,5 +181,9 @@ LOGGING = {
             'level': 'INFO',
             'propagate': False,
         },
+        'rankybo': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+        },
     }
 }
