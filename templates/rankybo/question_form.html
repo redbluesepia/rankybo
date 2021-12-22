@@ -40,11 +40,26 @@
                           rows="10">{{ form.content.value|default_if_none:'' }}</textarea>
 
                 {% block script %}
+                    {#                    <script>#}
+                    {#                        var simplemde = new SimpleMDE({element: document.getElementById("content")});#}
+                    {#                    </script>#}
+
                     <script>
-                        var simplemde = new SimpleMDE({element: document.getElementById("content")});
+                        var simplemde= new SimpleMDE({
+                            autofocus: true,
+                            element: document.getElementById("content"),
+                            spellChecker: false,
+                            {#background color 보여지는 것 제거함.#}
+                            initialValue: "",
+                            placeholder: "글 내용을 쓰세요...",
+                        });
                     </script>
 
+
+
+
                 {% endblock %}
+
             </div>
 
 
