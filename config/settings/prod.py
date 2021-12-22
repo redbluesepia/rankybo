@@ -1,6 +1,6 @@
 from .base import *
 
-ALLOWED_HOSTS = ['54.180.207.198']
+ALLOWED_HOSTS = ['54.180.207.198', 'rankystock.com']
 
 DEBUG = False
 
