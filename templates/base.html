@@ -29,7 +29,6 @@
 {#기본 템플릿 안에 삽입될 내용 End#}
 
 
-
 <script src="{% static 'simplemde.min.js' %}"></script>
 
 
@@ -45,6 +44,15 @@
 
 {% endblock %}
 {#자바스크립트 끝#}
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+    if (!wcs_add) var wcs_add = {};
+    wcs_add["wa"] = "11cdf57530a9e70";
+    if (window.wcs) {
+        wcs_do();
+    }
+</script>
 
 </body>
 </html>

@@ -1,8 +1,7 @@
-
 {% extends "base.html" %}
 {% block content %}
     <div class="container my-3">
-{#    수정 시작#}
+        {#    수정 시작#}
         <div class="row">
             <div class="col-4">
                 <h4>
@@ -14,7 +13,7 @@
                 </span>
             </div>
         </div>
-{#    수정 끝#}
+        {#    수정 끝#}
         <form method="post" class="post-form" action="{% url 'common:login' %}">
             {% csrf_token %}
             <input type="hidden" name="next" value="{{ next }}"> <!-- 로그인 성성 후 이동되는 URL -->
@@ -32,5 +31,14 @@
             </div>
             <button type="submit" class="btn btn-primary">로그인</button>
         </form>
+
+        <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+        <script type="text/javascript">
+            if (!wcs_add) var wcs_add = {};
+            wcs_add["wa"] = "11cdf57530a9e70";
+            if (window.wcs) {
+                wcs_do();
+            }
+        </script>
     </div>
 {% endblock %}

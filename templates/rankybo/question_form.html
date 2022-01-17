@@ -45,7 +45,7 @@
                     {#                    </script>#}
 
                     <script>
-                        var simplemde= new SimpleMDE({
+                        var simplemde = new SimpleMDE({
                             autofocus: true,
                             element: document.getElementById("content"),
                             spellChecker: false,
@@ -59,6 +59,14 @@
 
 
                 {% endblock %}
+                <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+                <script type="text/javascript">
+                    if (!wcs_add) var wcs_add = {};
+                    wcs_add["wa"] = "11cdf57530a9e70";
+                    if (window.wcs) {
+                        wcs_do();
+                    }
+                </script>
 
             </div>
 

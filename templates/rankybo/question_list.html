@@ -32,13 +32,13 @@
                 {% for question in question_list %}
                     <tr class="text-center">
 
-{#                    수정 시작#}
+                        {#                    수정 시작#}
                         <td>
                             {#                        번호 = 전체건수 - 시작인덱스 - 현재인덱스 + 1#}
                             {{ question_list.paginator.count|sub:question_list.start_index|sub:forloop.counter0|add:1 }}
 
                         </td>
-{#                        수정 끝#}
+                        {#                        수정 끝#}
                         <td>
                             {% if question.voter.all.count > 0 %}
                                 <span class="badge badge-warning px-2 py-1">{{ question.voter.all.count }}</span>
@@ -48,16 +48,16 @@
 
                         <td class="text-left">
                             <a href="{% url 'rankybo:detail' question.id %}">{{ question.subject }}</a>
-{#                            수정시작#}
+                            {#                            수정시작#}
                             {% if question.answer_set.count > 0 %}
-                            <span class="text-danger small ml-2">
+                                <span class="text-danger small ml-2">
                                 {{ question.answer_set.count }}
                             </span>
                             {% endif %}
-{#                            수정 끝#}
+                            {#                            수정 끝#}
 
                         </td>
-                         <td>{{ question.author.username }}</td> <!-- 글쓴이 추가 -->
+                        <td>{{ question.author.username }}</td> <!-- 글쓴이 추가 -->
                         <td>{{ question.create_date }}</td>
                     </tr>
                 {% endfor %}
@@ -112,6 +112,14 @@
         </ul>
         <!-- 페이징처리 끝 -->
         <a href="{% url 'rankybo:question_create' %}" class="btn btn-primary">의견 등록하기</a>
+        <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+        <script type="text/javascript">
+            if (!wcs_add) var wcs_add = {};
+            wcs_add["wa"] = "11cdf57530a9e70";
+            if (window.wcs) {
+                wcs_do();
+            }
+        </script>
     </div>
     <form id="searchForm" method="get" action="{% url 'index' %}">
         <input type="hidden" id="kw" name="kw" value="{{ kw|default_if_none:'' }}">
